@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "prepare": "deno run --allow-all generate-credentials.ts",
+    "test:deposit": "deno test --allow-all deposit.test.ts",
+    "test:withdraw": "deno test --allow-all withdraw.test.ts",
+    "test:withdraw_fake": "deno test --allow-all withdraw_fake.test.ts"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "preamble": {
+    "title": "golddydev/mynth-test",
+    "description": "Aiken contracts for project 'golddydev/mynth-test'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.23-alpha+8584adc"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "withdraw.withdraw",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/mynth_test~1types~1DepositDatum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "compiledCode": "58c001000032323232323232322223253330073232323232533300c3370e90010008999119198008008019129998098008a501323253330123371e00400a29444cc010010004c058008dd7180a0009bac301030113011301130113011301130113011300a004375c602060140122940c028004c038004c038008c030004c014008526136563253330073370e900000089919299980618070010a4c2c6eb8c030004c01401058c01400c8c014dd5000918019baa0015734aae7555cf2ab9f5742ae89",
+      "hash": "149aceb0dc255f43940eb885be0d9205e43858ca9b199f64c36cb95f"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Void": {
+      "title": "Unit",
+      "description": "The nullary constructor.",
+      "anyOf": [
+        {
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    },
+    "mynth_test/types/DepositDatum": {
+      "title": "DepositDatum",
+      "anyOf": [
+        {
+          "title": "DepositDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "depositor",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
